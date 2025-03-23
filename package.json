@@ -1,0 +1,60 @@
+{
+  "name": "duck-manager",
+  "version": "1.0.0",
+  "description": "Sistema de gestão",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon",
+    "package": "npx @electron/packager . --platform=win32 --arch=x64 --out=package --overwrite --ignore(package|resources|presentation|\\.gitignore|README.md|nodemon.json) --icon=resources/imgs/logo.ico",
+    "build": "electron-builder"
+  },
+  "author": "The Heapsters",
+  "license": "MIT",
+  "build": {
+    "appId": "com.the_heapsters.duck_manager",
+    "productName": "duck-manager",
+    "directories": {
+      "output": "build"
+    },
+    "files": [
+      "app/**/*",
+      "resources/**/*",
+      "app.js",
+      "preload.js",
+      "settings/settings.json",
+      "package.json"
+    ],
+    "asar": false,
+    "asarUnpack": [
+      "settings/settings.json",
+      "resources/**/*"
+    ],
+    "win": {
+      "icon": "resources/imgs/logo.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": false,
+      "createDesktopShortcut": "always",
+      "allowToChangeInstallationDirectory": true,
+      "shortcutName": "Duck Manager"
+    }
+  },
+  "dependencies": {
+    "mysql2": "^3.11.3"
+  },
+  "devDependencies": {
+    "@electron/packager": "^18.3.5",
+    "electron": "^33.0.2",
+    "electron-builder": "^25.1.8"
+  }
+}

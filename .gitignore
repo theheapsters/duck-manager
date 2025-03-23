@@ -1,0 +1,12 @@
+node_modules/
+bin/
+package/
+build/
+*.xls
+*.class
+*.py
+package-lock.json
+*.txt
+*.zip
+*.bat
+*.lst
