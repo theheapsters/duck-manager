@@ -1,60 +1,23 @@
 {
-  "name": "duck-manager",
+  "name": "pato-manager",
   "version": "1.0.0",
-  "description": "Sistema de gestão",
+  "description": "sgbd",
   "main": "app.js",
   "scripts": {
     "start": "nodemon",
-    "package": "npx @electron/packager . --platform=win32 --arch=x64 --out=package --overwrite --ignore(package|resources|presentation|\\.gitignore|README.md|nodemon.json) --icon=resources/imgs/logo.ico",
-    "build": "electron-builder"
+    "build": "electron-builder",
+    "package": "npx electron-packager . pato-manager --platform=win32 --arch=x64 --out=dist --overwrite"
   },
-  "author": "The Heapsters",
+  "author": "edgar augusto, pedro arthur, joão gilberto, pedro dos anjos, ana marcella, lucas madureira, murylo costa",
   "license": "MIT",
-  "build": {
-    "appId": "com.the_heapsters.duck_manager",
-    "productName": "duck-manager",
-    "directories": {
-      "output": "build"
-    },
-    "files": [
-      "app/**/*",
-      "resources/**/*",
-      "app.js",
-      "preload.js",
-      "settings/settings.json",
-      "package.json"
-    ],
-    "asar": false,
-    "asarUnpack": [
-      "settings/settings.json",
-      "resources/**/*"
-    ],
-    "win": {
-      "icon": "resources/imgs/logo.ico",
-      "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        }
-      ]
-    },
-    "nsis": {
-      "oneClick": false,
-      "perMachine": false,
-      "allowElevation": false,
-      "createDesktopShortcut": "always",
-      "allowToChangeInstallationDirectory": true,
-      "shortcutName": "Duck Manager"
-    }
-  },
   "dependencies": {
-    "mysql2": "^3.11.3"
+    "fs": "^0.0.1-security",
+    "mysql2": "^3.11.3",
+    "pato-manager": "file:"
   },
   "devDependencies": {
-    "@electron/packager": "^18.3.5",
-    "electron": "^33.0.2",
-    "electron-builder": "^25.1.8"
+    "electron": "^33.0.1",
+    "electron-packager": "^17.1.2",
+    "nodemon": "^3.1.7"
   }
 }

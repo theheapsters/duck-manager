@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #f4f4f4;
+    padding: 10px 5px;
+    border-bottom: 1px solid #ddd;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+header .barra-pesquisa {
+    display: flex;
+    flex-direction: row;
+}
+header .barra-pesquisa input[type="search"] {
+    border: 1px solid #ddd;
+    border-right: none;
+
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 8px;
+    font-size: 20px;
+    outline: none;
+}
+header .barra-pesquisa .sub {
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    padding: 10px;
+
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: space-evenly;
+}
+
+nav .btn {
+    font-size: 20px;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+nav .btn {
+    background-color: #007BFF;
+    color: white;
+}
+nav .btn:hover {
+    background-color: #0056b3;
+}
+
+body > main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+body > main table{
+    width: 100%;
+    border-collapse: collapse;
+}
+body > main table th{
+    background-color: violet;
+    border: 1px solid black;
+    padding: 10px;
+}
+body > main table td{
+    background-color: rgb(233, 233, 40);
+    border: 1px solid black;
+    padding: 10px;
+}
+body > main table tbody, body > main table td{
+    text-align: center;
+}
+body > main .fundo-produtos{
+    background-color: rgb(206, 79, 206);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selected-product {
+    background-color: rgba(206, 79, 206, 0.7); 
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    width: 100%; 
+}
+
+.selected-product .btn-remove {
+    background-color: #ff4d4d; 
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.selected-product .btn-remove:hover {
+    background-color: #ff1a1a; 
+}
+
+dialog[open] {
+    display: grid;
+    place-self: start center;
+
+    padding: 30px 20px;
+    margin-top: 10px;
+    width: 65%;
+}
+dialog[open] h1 {
+    text-align: center;
+
+    padding: 20px 0;
+}
+dialog[open] main {
+    border: 1px solid;
+    gap: 10px;
+
+    padding: 5px;
+}
+dialog[open] main .content {
+    gap: 20px;
+}
+dialog[open] main, dialog[open] main .content {
+    display: flex;
+    flex-direction: column;
+}
+dialog[open] main .content section input[type="number"] {
+    border: 1px solid;
+    padding: 1px 4px;
+    border-radius: 10px;
+    width: 10%;
+}
+dialog[open] main .content section ul {
+    list-style-position: inside;
+}
+dialog[open] main .inputs {
+    margin: auto;
+}

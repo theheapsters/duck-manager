@@ -1,0 +1,28 @@
+{
+  "quantidadeMinima": 10,
+  "pathImageCopied": "C:/...",
+  "atalhos": {
+    "pesquisa": "CTRL + i",
+    "menu": "CTRL + ,"
+  },
+  "dbConfigs": {
+    "host": "localhost",
+    "user": "root",
+    "password": "",
+    "database": "lc_sistemas"
+  },
+  "dbColumns": {
+    "código": "codigo",
+    "referência": "referencia",
+    "código de barras": "codigo_barras",
+    "nome": "nome",
+    "preço": "preco_venda",
+    "quantidade": "estoque"
+  },
+  "themes": {
+    "claro": "tema_claro_path",
+    "escuro": "tema_escuro_path",
+    "tucupi": "tema_tucupi_path"
+  },
+  "themeSelected": "tema_selected_path"
+}

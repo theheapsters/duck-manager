@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pato Manager</title>
+    <!-- ícone -->
+    <link rel="shortcut icon" href="imgs/logo.png" type="image/x-icon">
+    <!-- variáveis -->
+    <link rel="stylesheet" href="styles/variables.css">
+    <!-- estilo principal da página -->
+    <link rel="stylesheet" href="styles/style-main.css">
+    <!-- estilo de resetagem dos elementos -->
+    <link rel="stylesheet" href="styles/style-reset.css">
+    <!-- media queries -->
+    <link rel="stylesheet" href="styles/media-queries/style-mq-main.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <input type="button"
+            value="configurações"
+            class="btn btn-settings">
+
+            <input type="button"
+            value="Gerar doc."
+            class="btn btn-gerar-doc">
+
+            <input type="button"
+            value="Sobre"
+            class="btn btn-sobre">
+        </nav>
+
+        <section class="barra-pesquisa">
+            <input type="search"
+            id="pesquisa"
+            placeholder="Pesquisar">
+
+            <input type="submit"
+            class="sub"
+            value="🔍">
+        </section>
+    </header>
+
+    <main class="principal">
+    </main>
+
+    <dialog id="settings">
+        <h1>Configurações</h1>
+
+        <main>
+            <article class="content">
+                <section>
+                    <h1>configuração da lista de pedidos</h1>
+
+                    <p>
+                        Quantidade mínima:
+                        <input type="number" id="input-quantidade-minima" minlength="0">
+                    </p>
+                </section>
+
+                <section>
+                    <h1>imagem</h1>
+
+                    <p>
+                        Imagem:
+                        <input type="file" id="input-path-copied">
+                    </p>
+                    <p id="file-path-display"></p>
+                </section>
+
+                <section>
+                    <h1>configuração do banco de dados</h1>
+
+                    <ul id="db-configs"></ul>
+
+                    <h2>colunas</h2>
+
+                    <ul id="db-configs-columns"></ul>
+                </section>
+
+                <section>
+                    <h1>temas</h1>
+
+                    <ul id="themes-presentation"></ul>
+                </section>
+            </article>
+
+            <article class="inputs">
+                <input type="button"
+                class="btn-close"
+                value="fechar">
+
+                <input type="button"
+                class="btn-save"
+                value="salvar">
+            </article>
+        </main>
+    </dialog>
+
+    <dialog id="loading">
+        <input type="button" value="gerar lista de pedidos" id="btn-gerar-lista">
+    </dialog>
+
+    <script src="../js/table.js"></script>
+    <script src="../js/search.js"></script>
+    <script src="../js/settings.js"></script>
+    <script src="../js/criarListaDePedidos.js"></script>
+    <script src="../js/saveSettingsEvents.js"></script>
+</body>
+</html>

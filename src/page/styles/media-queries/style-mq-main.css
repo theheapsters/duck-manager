@@ -1,0 +1,78 @@
+@media (max-width: 912px) and (min-width: 822px) {
+    .btn-escolha {
+        font-size: 16px;
+        margin-left: -15px;
+        padding: 8px 16px;
+    }
+    .barra-pesquisa input[type="text"] {
+        font-size: 16px;
+        width: 550px;
+    }
+    .icon-pesquisa {
+        height: 35px;
+        margin-left: -20px;
+    }
+    .gerar-doc {
+        font-size: 16px;
+        margin-right: -15px;
+    }
+    .tabela {
+        width: 400px;
+    }
+    .fundo-produtos {
+        width: 500px;
+        height: 91.2vh;
+    }
+}
+
+@media (max-width: 822px) and (min-width: 705px) {
+    .btn-escolha {
+        font-size: 14px;
+    }
+    .barra-pesquisa input[type="text"] {
+        font-size: 14px;
+        width: 450px;
+    }
+    .icon-pesquisa {
+        height: 34px;
+    }
+    .gerar-doc {
+        font-size: 14px;
+    }
+    .tabela {
+        width: 350px;
+    }
+    .fundo-produtos {
+        width: 471px;
+        height: 91.5vh;
+    }
+}
+
+@media (max-width: 705px) and (min-width: 610px) {
+    .barra-pesquisa input[type="text"] {
+        width: 350px;
+    }
+    .tabela {
+        width: 300px;
+    }
+    .fundo-produtos {
+        width: 456px;
+        height: 91.5vh;
+    }
+}
+
+@media (max-width: 610px) {
+    .btn-escolha {
+        font-size: 12px;
+    }
+    .barra-pesquisa input[type="text"] {
+        width: 300px;
+    }
+    .gerar-doc {
+        font-size: 12px;
+        height: 34px;
+    }
+    .tabela {
+        width: 250px;
+    }
+}
